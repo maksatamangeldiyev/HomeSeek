@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>48825684-4D62-4265-BE8D-7EB2DBB5DF6B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HomeSeek</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF58650E-16E3-4429-A771-A96E524C2EAA</key>
+		<string>https://github.com/maksatamangeldiyev/HomeSeek.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HomeSeek/HomeSeek.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF58650E-16E3-4429-A771-A96E524C2EAA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/maksatamangeldiyev/HomeSeek.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF58650E-16E3-4429-A771-A96E524C2EAA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF58650E-16E3-4429-A771-A96E524C2EAA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HomeSeek</string>
+		</dict>
+	</array>
+</dict>
+</plist>
