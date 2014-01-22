@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA288150189000B900B1F1C9 /* PhysicsWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = CA28814F189000B900B1F1C9 /* PhysicsWorld.m */; };
+		CA349D29188FC83E009E228C /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = CA349D28188FC83E009E228C /* Map.m */; };
 		CA42C503188D599B0010757B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C502188D599B0010757B /* QuartzCore.framework */; };
 		CA42C505188D599B0010757B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C504188D599B0010757B /* OpenGLES.framework */; };
 		CA42C507188D599B0010757B /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C506188D599B0010757B /* OpenAL.framework */; };
@@ -216,6 +218,9 @@
 		CA42C7DF188D66CD0010757B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42C7DE188D66CD0010757B /* Hero.m */; };
 		CA42C7E1188D6E8D0010757B /* karakterV2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA42C7E0188D6E8D0010757B /* karakterV2-hd.png */; };
 		CA42CAC7188DAD550010757B /* 1px.png in Resources */ = {isa = PBXBuildFile; fileRef = CA42CAC6188DAD550010757B /* 1px.png */; };
+		CA42CACA188EED880010757B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42CAC9188EED880010757B /* Tile.m */; };
+		CAB41486188FBE2600EBE4B4 /* CollisionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB41485188FBE2600EBE4B4 /* CollisionObject.m */; };
+		CAB41489188FC08D00EBE4B4 /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB41488188FC08D00EBE4B4 /* Geometry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +234,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA28814E189000B900B1F1C9 /* PhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicsWorld.h; path = Classes/PhysicsWorld.h; sourceTree = "<group>"; };
+		CA28814F189000B900B1F1C9 /* PhysicsWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhysicsWorld.m; path = Classes/PhysicsWorld.m; sourceTree = "<group>"; };
+		CA349D27188FC83E009E228C /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		CA349D28188FC83E009E228C /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		CA42C4FF188D599B0010757B /* Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA42C502188D599B0010757B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CA42C504188D599B0010757B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -661,6 +670,12 @@
 		CA42C7DE188D66CD0010757B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero.m; path = Classes/Hero.m; sourceTree = "<group>"; };
 		CA42C7E0188D6E8D0010757B /* karakterV2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karakterV2-hd.png"; sourceTree = "<group>"; };
 		CA42CAC6188DAD550010757B /* 1px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1px.png; sourceTree = "<group>"; };
+		CA42CAC8188EED880010757B /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		CA42CAC9188EED880010757B /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		CAB41484188FBE2600EBE4B4 /* CollisionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionObject.h; path = Classes/CollisionObject.h; sourceTree = "<group>"; };
+		CAB41485188FBE2600EBE4B4 /* CollisionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollisionObject.m; path = Classes/CollisionObject.m; sourceTree = "<group>"; };
+		CAB41487188FC08D00EBE4B4 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
+		CAB41488188FC08D00EBE4B4 /* Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geometry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1557,6 +1572,16 @@
 				CA42C7B1188D599E0010757B /* IntroScene.m */,
 				CA42C7DD188D66CD0010757B /* Hero.h */,
 				CA42C7DE188D66CD0010757B /* Hero.m */,
+				CA42CAC8188EED880010757B /* Tile.h */,
+				CA42CAC9188EED880010757B /* Tile.m */,
+				CAB41484188FBE2600EBE4B4 /* CollisionObject.h */,
+				CAB41485188FBE2600EBE4B4 /* CollisionObject.m */,
+				CAB41487188FC08D00EBE4B4 /* Geometry.h */,
+				CAB41488188FC08D00EBE4B4 /* Geometry.m */,
+				CA349D27188FC83E009E228C /* Map.h */,
+				CA349D28188FC83E009E228C /* Map.m */,
+				CA28814E189000B900B1F1C9 /* PhysicsWorld.h */,
+				CA28814F189000B900B1F1C9 /* PhysicsWorld.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1676,11 +1701,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB41489188FC08D00EBE4B4 /* Geometry.m in Sources */,
 				CA42C5B1188D599C0010757B /* CCParticleBatchNode.m in Sources */,
 				CA42C729188D599D0010757B /* CCBReader.m in Sources */,
 				CA42C6D9188D599D0010757B /* CCButton.m in Sources */,
 				CA42C684188D599D0010757B /* OALAudioActions.m in Sources */,
 				CA42C6C9188D599D0010757B /* NSMutableArray+WeakReferences.m in Sources */,
+				CA349D29188FC83E009E228C /* Map.m in Sources */,
 				CA42C643188D599C0010757B /* CCGLView.m in Sources */,
 				CA42C70D188D599D0010757B /* mat4.c in Sources */,
 				CA42C569188D599B0010757B /* CCAtlasNode.m in Sources */,
@@ -1705,6 +1732,7 @@
 				CA42C6D3188D599D0010757B /* OALTools.m in Sources */,
 				CA42C589188D599C0010757B /* ccGLStateCache.m in Sources */,
 				CA42C681188D599D0010757B /* OALActionManager.m in Sources */,
+				CA42CACA188EED880010757B /* Tile.m in Sources */,
 				CA42C5E0188D599C0010757B /* CCScheduler.m in Sources */,
 				CA42C5B4188D599C0010757B /* CCParticleExamples.m in Sources */,
 				CA42C6E6188D599D0010757B /* CCSlider.m in Sources */,
@@ -1778,6 +1806,7 @@
 				CA42C6A6188D599D0010757B /* ALDevice.m in Sources */,
 				CA42C719188D599D0010757B /* vec2.c in Sources */,
 				CA42C549188D599B0010757B /* CCAction.m in Sources */,
+				CAB41486188FBE2600EBE4B4 /* CollisionObject.m in Sources */,
 				CA42C5AD188D599C0010757B /* CCParallaxNode.m in Sources */,
 				CA42C715188D599D0010757B /* ray2.c in Sources */,
 				CA42C691188D599D0010757B /* OALAudioTracks.m in Sources */,
@@ -1792,6 +1821,7 @@
 				CA42C664188D599C0010757B /* NSAttributedString+CCAdditions.m in Sources */,
 				CA42C726188D599D0010757B /* CCBKeyframe.m in Sources */,
 				CA42C6E0188D599D0010757B /* CCControlTextureFactory.m in Sources */,
+				CA288150189000B900B1F1C9 /* PhysicsWorld.m in Sources */,
 				CA42C565188D599B0010757B /* CCAnimationCache.m in Sources */,
 				CA42C6E9188D599D0010757B /* CCTableView.m in Sources */,
 				CA42C7AC188D599E0010757B /* AppDelegate.m in Sources */,
@@ -2011,6 +2041,7 @@
 				CA42C7D4188D599E0010757B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA42C7D5188D599E0010757B /* Build configuration list for PBXNativeTarget "Home" */ = {
 			isa = XCConfigurationList;
@@ -2019,6 +2050,7 @@
 				CA42C7D7188D599E0010757B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

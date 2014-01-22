@@ -7,25 +7,16 @@
 //
 
 #import "Hero.h"
-
 #import "CCDrawingPrimitives.h"
 
 CCSprite* drawNode;
 CGPoint center;
 @implementation Hero
 
-
-
 -(instancetype) initWithMap:(CCTiledMap*) map
 {
-    if(self = [super init])
+    if(self = [super initWithFileName:@"karakterV2.png"])
     {
-        self.innerSprite = [CCSprite spriteWithImageNamed:@"karakterV2.png"];
-        [self addChild:self.innerSprite];
-        self.contentSize = self.innerSprite.contentSize;
-        center = ccp(self.contentSize.width/2.f, self.contentSize.height/2.f);
-        
-        self.innerSprite.position = center;
         CCTiledMapObjectGroup *objectGroup = [map objectGroupNamed:@"Char"];
         
         if(objectGroup == NULL){
@@ -33,18 +24,11 @@ CGPoint center;
         }
         
         NSDictionary *spawnPoint = [objectGroup.objects objectAtIndex:0];
-        
-        int x = [[spawnPoint valueForKey:@"x"] intValue]/2;
-        int y = [[spawnPoint valueForKey:@"y"] intValue]/2;
-        
-        self.position = ccp(x,y);
+        [self setPositionWithTileObject:spawnPoint];
         [map addChild:self];
 
-        self.velocity = ccp(0,0);
-        
-        drawNode = [CCSprite spriteWithImageNamed:@"1px.png"];
-        drawNode.color = [CCColor blueColor];
-//        [self addChild:drawNode];
+        self.isJumping = NO;
+       
     }
     return self;
 }
@@ -127,19 +111,11 @@ CGPoint center;
 
 -(void) setOnGround:(BOOL)b
 {
-    if(!self.onGround && b)
+    if(b)
     {
-        float timeSinceLastOnGround = -[self.lastTimeOnGround timeIntervalSinceNow];
-        
-        if(timeSinceLastOnGround > 1)
-        {
-            [self landOnGround];
-        }
-    }else if(self.onGround && !b)
-    {
-        self.lastTimeOnGround = [NSDate date];
+        self.isJumping = NO;
     }
-    _onGround = b;
+    [super setOnGround:b];
 }
 
 -(void) landOnGround
@@ -159,38 +135,18 @@ CGPoint center;
 
 -(void) stop
 {
-    self.velocity = ccp(0, self.velocity.y);
+    [super stop];
     [self stopWalkAnimation];
 }
 
 -(void) jump
 {
+    if(self.isJumping)
+    {
+        return;
+    }
+    self.isJumping = YES;
     self.velocity = ccpAdd(self.velocity, ccp(0, 300));
 }
 
--(void) update:(CCTime)delta
-{   
-    CGPoint gravity = ccp(0, -450);
-    CGPoint gravityStep = ccpMult(gravity, delta);
-    self.velocity = ccpAdd(self.velocity, gravityStep);
-    CGPoint stepVelocity = ccpMult(self.velocity, delta);
-    self.desiredPosition = ccpAdd(self.position, stepVelocity);
-    self.desiredPosition = ccp(roundf(self.desiredPosition.x), roundf(self.desiredPosition.y));
-}
-
-
--(CGRect)collisionBoundingBox {
-    CGRect collisionBox = CGRectInset(self.boundingBox, 3, 0);
-    CGPoint diff = ccpSub(self.desiredPosition, self.position);
-    CGRect returnBoundingBox = CGRectOffset(collisionBox, diff.x, diff.y);
-    
-    
-    drawNode.position = ccp(0, 0);
-    drawNode.anchorPoint = ccp(0,0);
-    drawNode.scaleX = returnBoundingBox.size.width;
-    drawNode.scaleY = returnBoundingBox.size.height;
-    
-    
-    return returnBoundingBox;
-}
 @end

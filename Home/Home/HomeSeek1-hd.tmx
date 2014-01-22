@@ -2,6 +2,16 @@
 <map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tileset-platformer-hd" tilewidth="32" tileheight="32">
   <image source="tileset-platformer-hd.png" width="192" height="544"/>
+  <tile id="25">
+   <properties>
+    <property name="slope" value="45"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="slope" value="-45"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="Background" width="100" height="20">
   <data encoding="base64" compression="zlib">
@@ -10,7 +20,7 @@
  </layer>
  <layer name="Ground" width="100" height="20">
   <data encoding="base64" compression="zlib">
-   eJzt1EEKhDAQBdHeuPIGimD0GN7/XuoqEZuY1ogN1oMPs1AcUqgIgFrC138AB/TwhR6+0MMXevhCD1/o4Qs93tUXrLmx4eEz/7hd+8KmbbOhRxDeO4tgnKXHKPRIlZyDtcc+rYf2jqb3oF6PErkW9IiuzuJpjyX53cnxG0WPsxo9tGnfpzFzPaLcmdztYRl0nA0QrfXtHIs=
+   eJzt1k0KwjAQhuFsXHkDfyDqMbz/vexQJFnMJDNp04W+D3zgoqLkpdWUAADAr3ga67ksuxq7TfmmsEiLvOxhTHrS5Bi9FjQ5jrcFTeaLtqBJjPVbXO80sPvGz/zHifOEyb3wCvT43kPwGXk2eXvkRI+a5xyiPWRaD+0erd+D/Xp4tFrQo+idxdYe7+p16/8ZVnv00KY9n3LjehStMxntERl0nA1QfAA2tiOr
   </data>
  </layer>
  <layer name="Enemies" width="100" height="20" visible="0">

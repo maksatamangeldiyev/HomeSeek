@@ -9,8 +9,10 @@
 
 // -----------------------------------------------------------------------
 
-#import "cocos2d.h"
-#import "cocos2d-ui.h"
+#import "CollisionObject.h"
+#import "Map.h"
+#import "PhysicsWorld.h"
+#import "Hero.h"
 
 @interface IntroScene : CCScene
 
@@ -19,7 +21,9 @@
 + (IntroScene *)scene;
 - (id)init;
 
-@property (nonatomic, strong) NSMutableArray* collisionPoints;
+@property (nonatomic, strong) Hero* hero;
+@property (nonatomic, strong) PhysicsWorld* world;
+@property (nonatomic, strong) Map* map;
 
 @property (nonatomic, assign) CGPoint touchDownLocation;
 @property (nonatomic, strong) NSDate* touchDownTime;
