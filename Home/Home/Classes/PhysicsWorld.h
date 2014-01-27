@@ -12,15 +12,19 @@
 
 @interface PhysicsWorld : NSObject
 
++(instancetype) world;
 @property (nonatomic, weak) Map* map;
 @property (nonatomic, weak) CCTiledMapLayer* walls;
 
 @property (nonatomic, strong) NSMutableArray* dynamicObjects;
 
+@property (nonatomic, strong) NSMutableArray* objectsToRemove;
+
 +(instancetype) physicsWorldWithMap:(Map*) map;
 -(instancetype) initWithMap:(Map*) map;
 
 -(void) addDynamicObject:(CollisionObject*) object;
+-(void) removeDynamicObject:(CollisionObject*) object;
 
 -(void) step:(CCTime)delta;
 

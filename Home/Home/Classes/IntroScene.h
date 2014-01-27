@@ -13,6 +13,7 @@
 #import "Map.h"
 #import "PhysicsWorld.h"
 #import "Hero.h"
+#import "Plant.h"
 
 @interface IntroScene : CCScene
 

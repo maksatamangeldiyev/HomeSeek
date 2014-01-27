@@ -24,7 +24,13 @@ typedef enum {
 @property (nonatomic, assign) CGPoint tilePos;
 @property (nonatomic, assign) CGRect tileRect;
 @property (nonatomic, assign) PointPos tileType;
-@property (nonatomic, assign) float slope;
+@property (nonatomic, assign) bool hasSlope;
+
+@property (nonatomic, assign) float slopeYLeft;
+@property (nonatomic, assign) float slopeYRight;
+
+@property (nonatomic, assign) float slopeAngle;
+
 @property (nonatomic, strong) CCSprite* tileSprite;
 
 -(bool) isEmpty;

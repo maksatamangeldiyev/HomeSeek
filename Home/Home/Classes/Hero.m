@@ -7,7 +7,10 @@
 //
 
 #import "Hero.h"
+#import "Plant.h"
 #import "CCDrawingPrimitives.h"
+#import "SoundManager.h"
+#import "IntroScene.h"
 
 CCSprite* drawNode;
 CGPoint center;
@@ -15,7 +18,7 @@ CGPoint center;
 
 -(instancetype) initWithMap:(CCTiledMap*) map
 {
-    if(self = [super initWithFileName:@"karakterV2.png"])
+    if(self = [super initWithFileName:@"hero.png"])
     {
         CCTiledMapObjectGroup *objectGroup = [map objectGroupNamed:@"Char"];
         
@@ -25,12 +28,23 @@ CGPoint center;
         
         NSDictionary *spawnPoint = [objectGroup.objects objectAtIndex:0];
         [self setPositionWithTileObject:spawnPoint];
+        self.zOrder = 10000;
         [map addChild:self];
 
         self.isJumping = NO;
-       
+        self.isDead = NO;
+        
+        [self performSelector:@selector(playIdleSound) withObject:nil afterDelay:rand()%15];
+        
     }
     return self;
+}
+
+-(void) playIdleSound
+{
+    
+    [[SoundManager sharedManager] playIdle];
+    [self performSelector:@selector(playIdleSound) withObject:nil afterDelay:rand()%15];
 }
 
 -(void) startWalkAnimation
@@ -39,6 +53,8 @@ CGPoint center;
     {
         return;
     }
+    
+    [[SoundManager sharedManager] playSteps];
     
     self.isWalking = YES;
     CCAction* walkAnimation = [CCActionRepeatForever actionWithAction:
@@ -61,12 +77,13 @@ CGPoint center;
 
 -(void) stopWalkAnimation
 {
+    [[SoundManager sharedManager] stopSteps];
     if(self.isWalking)
     {
         [self.innerSprite runAction:
          [CCActionSpawn actions:
             [CCActionScaleTo actionWithDuration:.1f scaleX:1.f scaleY:1.f],
-            [CCActionMoveTo actionWithDuration:.1f position:center],
+            [CCActionMoveTo actionWithDuration:.1f position:self.center],
           nil
           ]];
     }
@@ -78,7 +95,7 @@ CGPoint center;
 {
     if(self.velocity.x <= 0)
     {
-        self.velocity = ccpAdd(self.velocity, ccp(70, 0));
+        self.velocity = ccpAdd(self.velocity, ccp(140, 0));
     }
     
     if(self.velocity.x > 0)
@@ -96,7 +113,7 @@ CGPoint center;
 {
     if(self.velocity.x >= 0)
     {
-        self.velocity = ccpAdd(self.velocity, ccp(-70, 0));
+        self.velocity = ccpAdd(self.velocity, ccp(-140, 0));
     }
     
     if(self.velocity.x < 0)
@@ -141,12 +158,83 @@ CGPoint center;
 
 -(void) jump
 {
+    
     if(self.isJumping)
     {
         return;
     }
+    
+    [[SoundManager sharedManager] playJump];
     self.isJumping = YES;
-    self.velocity = ccpAdd(self.velocity, ccp(0, 300));
+    self.velocity = ccpAdd(self.velocity, ccp(0, 350));
+}
+
+-(void) setSlope:(float)slope
+{
+    if(slope != self.slope)
+    {
+        if(slope > 0)
+        {
+            slope = -20;
+        }else if(slope < 0)
+        {
+            slope = 20;
+        }
+        [self.innerSprite runAction:[CCActionRotateTo actionWithDuration:.1f angle:slope]];
+    }
+    [super setSlope:slope];
+}
+
+-(void) collisionWith:(CollisionObject*) collided size:(CGSize) collisionSize
+{
+//    if([collided isKindOfClass:[Plant class]])
+//    {
+//        float shiftX = 2*collisionSize.width;
+//        float shiftY = 2*collisionSize.height;
+//        
+//        float xVel = self.velocity.x;
+//        float yVel = self.velocity.y;
+//        if(!self.isWalking)
+//        {
+//            xVel = 0;
+//        }
+//        if(!self.isJumping)
+//        {
+//            yVel = 0;
+//        }
+//        
+//        self.velocity = ccp(xVel, yVel);
+//        self.onGround = YES;
+//       
+//        
+//        if(shiftY < 0)
+//        {
+//            shiftY = 0;
+//        }
+//        
+//        self.desiredPosition  = ccpAdd(self.desiredPosition, ccp(0, shiftY));
+//    }
+    
+    if([collided isKindOfClass:[Plant class]])
+    {
+        [self die];
+    }
+}
+
+-(void) die
+{
+    if(self.isDead)
+    {
+        return;
+    }
+    self.isDead = YES;
+    [[SoundManager sharedManager] playDie];
+    [self runAction:[CCActionSequence actions:
+                     [CCActionScaleTo actionWithDuration:1.1f scaleX:0 scaleY:0],
+                     [CCActionCallBlock actionWithBlock:^{
+                            [[CCDirector sharedDirector] replaceScene:[IntroScene scene]
+                                                       withTransition:[CCTransition transitionFadeWithColor:[CCColor yellowColor] duration:.4f]];
+                    }],nil]];
 }
 
 @end

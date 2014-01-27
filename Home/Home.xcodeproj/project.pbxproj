@@ -8,6 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		CA288150189000B900B1F1C9 /* PhysicsWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = CA28814F189000B900B1F1C9 /* PhysicsWorld.m */; };
+		CA28815E1890227C00B1F1C9 /* zemin1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA28815A1890227C00B1F1C9 /* zemin1-hd.png */; };
+		CA28815F1890227C00B1F1C9 /* zemin2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA28815B1890227C00B1F1C9 /* zemin2-hd.png */; };
+		CA2881601890227C00B1F1C9 /* zemin3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA28815C1890227C00B1F1C9 /* zemin3-hd.png */; };
+		CA2881611890227C00B1F1C9 /* zemin4-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA28815D1890227C00B1F1C9 /* zemin4-hd.png */; };
+		CA288166189043D400B1F1C9 /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288165189043D400B1F1C9 /* Plant.m */; };
+		CA28816B1891787D00B1F1C9 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = CA28816A1891787D00B1F1C9 /* Coin.m */; };
+		CA28816D1891789700B1F1C9 /* coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA28816C1891789700B1F1C9 /* coin-hd.png */; };
+		CA2881971891815B00B1F1C9 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2881961891815B00B1F1C9 /* SoundManager.m */; };
+		CA2881AB1891B7BB00B1F1C9 /* Button.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881981891B7BB00B1F1C9 /* Button.m4a */; };
+		CA2881AC1891B7BB00B1F1C9 /* Chest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881991891B7BB00B1F1C9 /* Chest.m4a */; };
+		CA2881AE1891B7BB00B1F1C9 /* Die.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA28819B1891B7BB00B1F1C9 /* Die.m4a */; };
+		CA2881AF1891B7BB00B1F1C9 /* Enemy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA28819C1891B7BB00B1F1C9 /* Enemy.m4a */; };
+		CA2881B01891B7BB00B1F1C9 /* Energy Increase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA28819D1891B7BB00B1F1C9 /* Energy Increase.m4a */; };
+		CA2881B11891B7BB00B1F1C9 /* idle1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA28819E1891B7BB00B1F1C9 /* idle1.m4a */; };
+		CA2881B21891B7BB00B1F1C9 /* idle2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA28819F1891B7BB00B1F1C9 /* idle2.m4a */; };
+		CA2881B31891B7BB00B1F1C9 /* idle3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A01891B7BB00B1F1C9 /* idle3.m4a */; };
+		CA2881B51891B7BB00B1F1C9 /* Level Completed.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A21891B7BB00B1F1C9 /* Level Completed.m4a */; };
+		CA2881B61891B7BB00B1F1C9 /* Music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A31891B7BB00B1F1C9 /* Music.m4a */; };
+		CA2881B71891B7BB00B1F1C9 /* Play Button Alternative.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A41891B7BB00B1F1C9 /* Play Button Alternative.m4a */; };
+		CA2881B81891B7BB00B1F1C9 /* Play Button.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A51891B7BB00B1F1C9 /* Play Button.m4a */; };
+		CA2881B91891B7BB00B1F1C9 /* Rain Forest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A61891B7BB00B1F1C9 /* Rain Forest.m4a */; };
+		CA2881BA1891B7BB00B1F1C9 /* Rock Fall.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A71891B7BB00B1F1C9 /* Rock Fall.m4a */; };
+		CA2881BB1891B7BB00B1F1C9 /* Rock Push.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881A81891B7BB00B1F1C9 /* Rock Push.m4a */; };
+		CA2881BD1891B7BB00B1F1C9 /* Wear.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881AA1891B7BB00B1F1C9 /* Wear.m4a */; };
+		CA2881C31891BBDA00B1F1C9 /* Jump.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881C21891BBDA00B1F1C9 /* Jump.m4a */; };
+		CA2881C51891BDBE00B1F1C9 /* Coin.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881C41891BDBE00B1F1C9 /* Coin.m4a */; };
+		CA2881C91891BEA600B1F1C9 /* Walking.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CA2881C81891BEA600B1F1C9 /* Walking.m4a */; };
+		CA2881D01891CCCE00B1F1C9 /* big_tree-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2881CA1891CCCE00B1F1C9 /* big_tree-hd.png */; };
+		CA2881D11891CCCE00B1F1C9 /* floor-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2881CB1891CCCE00B1F1C9 /* floor-hd.png */; };
+		CA2881D31891CCCE00B1F1C9 /* tree1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2881CD1891CCCE00B1F1C9 /* tree1-hd.png */; };
+		CA2881D41891CCCE00B1F1C9 /* tree2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2881CE1891CCCE00B1F1C9 /* tree2-hd.png */; };
+		CA2881D51891CCCE00B1F1C9 /* tree3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2881CF1891CCCE00B1F1C9 /* tree3-hd.png */; };
+		CA2881D91891D85E00B1F1C9 /* clouds_bushes-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2881D81891D85E00B1F1C9 /* clouds_bushes-hd.png */; };
 		CA349D29188FC83E009E228C /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = CA349D28188FC83E009E228C /* Map.m */; };
 		CA42C503188D599B0010757B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C502188D599B0010757B /* QuartzCore.framework */; };
 		CA42C505188D599B0010757B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA42C504188D599B0010757B /* OpenGLES.framework */; };
@@ -216,11 +249,14 @@
 		CA42C7DB188D59D10010757B /* HomeSeek1-hd.tmx in Resources */ = {isa = PBXBuildFile; fileRef = CA42C7D9188D59D10010757B /* HomeSeek1-hd.tmx */; };
 		CA42C7DC188D59D10010757B /* tileset-platformer-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA42C7DA188D59D10010757B /* tileset-platformer-hd.png */; };
 		CA42C7DF188D66CD0010757B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42C7DE188D66CD0010757B /* Hero.m */; };
-		CA42C7E1188D6E8D0010757B /* karakterV2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CA42C7E0188D6E8D0010757B /* karakterV2-hd.png */; };
 		CA42CAC7188DAD550010757B /* 1px.png in Resources */ = {isa = PBXBuildFile; fileRef = CA42CAC6188DAD550010757B /* 1px.png */; };
 		CA42CACA188EED880010757B /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42CAC9188EED880010757B /* Tile.m */; };
 		CAB41486188FBE2600EBE4B4 /* CollisionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB41485188FBE2600EBE4B4 /* CollisionObject.m */; };
 		CAB41489188FC08D00EBE4B4 /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB41488188FC08D00EBE4B4 /* Geometry.m */; };
+		CAC69AEC1892773400ED4DB4 /* BG-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC69AE91892773400ED4DB4 /* BG-hd.png */; };
+		CAC69AED1892773400ED4DB4 /* enemy_plantV2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC69AEA1892773400ED4DB4 /* enemy_plantV2-hd.png */; };
+		CAC69AEE1892773400ED4DB4 /* flowers-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC69AEB1892773400ED4DB4 /* flowers-hd.png */; };
+		CAC69AF0189282EC00ED4DB4 /* hero-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC69AEF189282EC00ED4DB4 /* hero-hd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +272,42 @@
 /* Begin PBXFileReference section */
 		CA28814E189000B900B1F1C9 /* PhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicsWorld.h; path = Classes/PhysicsWorld.h; sourceTree = "<group>"; };
 		CA28814F189000B900B1F1C9 /* PhysicsWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhysicsWorld.m; path = Classes/PhysicsWorld.m; sourceTree = "<group>"; };
+		CA28815A1890227C00B1F1C9 /* zemin1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zemin1-hd.png"; sourceTree = "<group>"; };
+		CA28815B1890227C00B1F1C9 /* zemin2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zemin2-hd.png"; sourceTree = "<group>"; };
+		CA28815C1890227C00B1F1C9 /* zemin3-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zemin3-hd.png"; sourceTree = "<group>"; };
+		CA28815D1890227C00B1F1C9 /* zemin4-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zemin4-hd.png"; sourceTree = "<group>"; };
+		CA288164189043D400B1F1C9 /* Plant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plant.h; sourceTree = "<group>"; };
+		CA288165189043D400B1F1C9 /* Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plant.m; sourceTree = "<group>"; };
+		CA2881691891787D00B1F1C9 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		CA28816A1891787D00B1F1C9 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
+		CA28816C1891789700B1F1C9 /* coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coin-hd.png"; sourceTree = "<group>"; };
+		CA2881951891815B00B1F1C9 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		CA2881961891815B00B1F1C9 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		CA2881981891B7BB00B1F1C9 /* Button.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Button.m4a; sourceTree = "<group>"; };
+		CA2881991891B7BB00B1F1C9 /* Chest.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chest.m4a; sourceTree = "<group>"; };
+		CA28819B1891B7BB00B1F1C9 /* Die.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Die.m4a; sourceTree = "<group>"; };
+		CA28819C1891B7BB00B1F1C9 /* Enemy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Enemy.m4a; sourceTree = "<group>"; };
+		CA28819D1891B7BB00B1F1C9 /* Energy Increase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Energy Increase.m4a"; sourceTree = "<group>"; };
+		CA28819E1891B7BB00B1F1C9 /* idle1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = idle1.m4a; sourceTree = "<group>"; };
+		CA28819F1891B7BB00B1F1C9 /* idle2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = idle2.m4a; sourceTree = "<group>"; };
+		CA2881A01891B7BB00B1F1C9 /* idle3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = idle3.m4a; sourceTree = "<group>"; };
+		CA2881A21891B7BB00B1F1C9 /* Level Completed.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Level Completed.m4a"; sourceTree = "<group>"; };
+		CA2881A31891B7BB00B1F1C9 /* Music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Music.m4a; sourceTree = "<group>"; };
+		CA2881A41891B7BB00B1F1C9 /* Play Button Alternative.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play Button Alternative.m4a"; sourceTree = "<group>"; };
+		CA2881A51891B7BB00B1F1C9 /* Play Button.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Play Button.m4a"; sourceTree = "<group>"; };
+		CA2881A61891B7BB00B1F1C9 /* Rain Forest.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rain Forest.m4a"; sourceTree = "<group>"; };
+		CA2881A71891B7BB00B1F1C9 /* Rock Fall.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rock Fall.m4a"; sourceTree = "<group>"; };
+		CA2881A81891B7BB00B1F1C9 /* Rock Push.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rock Push.m4a"; sourceTree = "<group>"; };
+		CA2881AA1891B7BB00B1F1C9 /* Wear.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Wear.m4a; sourceTree = "<group>"; };
+		CA2881C21891BBDA00B1F1C9 /* Jump.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jump.m4a; sourceTree = "<group>"; };
+		CA2881C41891BDBE00B1F1C9 /* Coin.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Coin.m4a; sourceTree = "<group>"; };
+		CA2881C81891BEA600B1F1C9 /* Walking.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walking.m4a; sourceTree = "<group>"; };
+		CA2881CA1891CCCE00B1F1C9 /* big_tree-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "big_tree-hd.png"; sourceTree = "<group>"; };
+		CA2881CB1891CCCE00B1F1C9 /* floor-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floor-hd.png"; sourceTree = "<group>"; };
+		CA2881CD1891CCCE00B1F1C9 /* tree1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree1-hd.png"; sourceTree = "<group>"; };
+		CA2881CE1891CCCE00B1F1C9 /* tree2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree2-hd.png"; sourceTree = "<group>"; };
+		CA2881CF1891CCCE00B1F1C9 /* tree3-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree3-hd.png"; sourceTree = "<group>"; };
+		CA2881D81891D85E00B1F1C9 /* clouds_bushes-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clouds_bushes-hd.png"; sourceTree = "<group>"; };
 		CA349D27188FC83E009E228C /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		CA349D28188FC83E009E228C /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
 		CA42C4FF188D599B0010757B /* Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Home.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -668,7 +740,6 @@
 		CA42C7DA188D59D10010757B /* tileset-platformer-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tileset-platformer-hd.png"; sourceTree = "<group>"; };
 		CA42C7DD188D66CD0010757B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero.h; path = Classes/Hero.h; sourceTree = "<group>"; };
 		CA42C7DE188D66CD0010757B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero.m; path = Classes/Hero.m; sourceTree = "<group>"; };
-		CA42C7E0188D6E8D0010757B /* karakterV2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "karakterV2-hd.png"; sourceTree = "<group>"; };
 		CA42CAC6188DAD550010757B /* 1px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1px.png; sourceTree = "<group>"; };
 		CA42CAC8188EED880010757B /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		CA42CAC9188EED880010757B /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
@@ -676,6 +747,10 @@
 		CAB41485188FBE2600EBE4B4 /* CollisionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollisionObject.m; path = Classes/CollisionObject.m; sourceTree = "<group>"; };
 		CAB41487188FC08D00EBE4B4 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		CAB41488188FC08D00EBE4B4 /* Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geometry.m; sourceTree = "<group>"; };
+		CAC69AE91892773400ED4DB4 /* BG-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BG-hd.png"; sourceTree = "<group>"; };
+		CAC69AEA1892773400ED4DB4 /* enemy_plantV2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enemy_plantV2-hd.png"; sourceTree = "<group>"; };
+		CAC69AEB1892773400ED4DB4 /* flowers-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flowers-hd.png"; sourceTree = "<group>"; };
+		CAC69AEF189282EC00ED4DB4 /* hero-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hero-hd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,6 +774,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA28816E1891812800B1F1C9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CA2881981891B7BB00B1F1C9 /* Button.m4a */,
+				CA2881991891B7BB00B1F1C9 /* Chest.m4a */,
+				CA28819B1891B7BB00B1F1C9 /* Die.m4a */,
+				CA28819C1891B7BB00B1F1C9 /* Enemy.m4a */,
+				CA28819D1891B7BB00B1F1C9 /* Energy Increase.m4a */,
+				CA2881C41891BDBE00B1F1C9 /* Coin.m4a */,
+				CA28819E1891B7BB00B1F1C9 /* idle1.m4a */,
+				CA28819F1891B7BB00B1F1C9 /* idle2.m4a */,
+				CA2881A01891B7BB00B1F1C9 /* idle3.m4a */,
+				CA2881C21891BBDA00B1F1C9 /* Jump.m4a */,
+				CA2881A21891B7BB00B1F1C9 /* Level Completed.m4a */,
+				CA2881A31891B7BB00B1F1C9 /* Music.m4a */,
+				CA2881A41891B7BB00B1F1C9 /* Play Button Alternative.m4a */,
+				CA2881A51891B7BB00B1F1C9 /* Play Button.m4a */,
+				CA2881A61891B7BB00B1F1C9 /* Rain Forest.m4a */,
+				CA2881A71891B7BB00B1F1C9 /* Rock Fall.m4a */,
+				CA2881A81891B7BB00B1F1C9 /* Rock Push.m4a */,
+				CA2881C81891BEA600B1F1C9 /* Walking.m4a */,
+				CA2881AA1891B7BB00B1F1C9 /* Wear.m4a */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		CA42C4F6188D599B0010757B = {
 			isa = PBXGroup;
 			children = (
@@ -747,7 +848,22 @@
 		CA42C51B188D599B0010757B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA42C7E0188D6E8D0010757B /* karakterV2-hd.png */,
+				CA28816E1891812800B1F1C9 /* Sounds */,
+				CA28816C1891789700B1F1C9 /* coin-hd.png */,
+				CA28815A1890227C00B1F1C9 /* zemin1-hd.png */,
+				CA28815B1890227C00B1F1C9 /* zemin2-hd.png */,
+				CA28815C1890227C00B1F1C9 /* zemin3-hd.png */,
+				CA28815D1890227C00B1F1C9 /* zemin4-hd.png */,
+				CA2881CA1891CCCE00B1F1C9 /* big_tree-hd.png */,
+				CA2881CB1891CCCE00B1F1C9 /* floor-hd.png */,
+				CA2881CD1891CCCE00B1F1C9 /* tree1-hd.png */,
+				CA2881CE1891CCCE00B1F1C9 /* tree2-hd.png */,
+				CA2881CF1891CCCE00B1F1C9 /* tree3-hd.png */,
+				CAC69AE91892773400ED4DB4 /* BG-hd.png */,
+				CAC69AEA1892773400ED4DB4 /* enemy_plantV2-hd.png */,
+				CAC69AEB1892773400ED4DB4 /* flowers-hd.png */,
+				CA2881D81891D85E00B1F1C9 /* clouds_bushes-hd.png */,
+				CAC69AEF189282EC00ED4DB4 /* hero-hd.png */,
 				CA42CAC6188DAD550010757B /* 1px.png */,
 				CA42C7D8188D59B80010757B /* Tilesets */,
 				CA42C51C188D599B0010757B /* Default.png */,
@@ -1582,6 +1698,12 @@
 				CA349D28188FC83E009E228C /* Map.m */,
 				CA28814E189000B900B1F1C9 /* PhysicsWorld.h */,
 				CA28814F189000B900B1F1C9 /* PhysicsWorld.m */,
+				CA288164189043D400B1F1C9 /* Plant.h */,
+				CA288165189043D400B1F1C9 /* Plant.m */,
+				CA2881691891787D00B1F1C9 /* Coin.h */,
+				CA28816A1891787D00B1F1C9 /* Coin.m */,
+				CA2881951891815B00B1F1C9 /* SoundManager.h */,
+				CA2881961891815B00B1F1C9 /* SoundManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1665,32 +1787,65 @@
 			files = (
 				CA42C7DC188D59D10010757B /* tileset-platformer-hd.png in Resources */,
 				CA42C51F188D599B0010757B /* Default@2x.png in Resources */,
+				CA2881B11891B7BB00B1F1C9 /* idle1.m4a in Resources */,
 				CA42C532188D599B0010757B /* Icon-120.png in Resources */,
+				CA2881B91891B7BB00B1F1C9 /* Rain Forest.m4a in Resources */,
 				CA42C736188D599D0010757B /* LICENSE_CCBReader.txt in Resources */,
 				CA42C528188D599B0010757B /* Icon@2x.png in Resources */,
-				CA42C7E1188D6E8D0010757B /* karakterV2-hd.png in Resources */,
 				CA42C53A188D599B0010757B /* Icon-Small@2x.png in Resources */,
+				CA2881AF1891B7BB00B1F1C9 /* Enemy.m4a in Resources */,
 				CA42CAC7188DAD550010757B /* 1px.png in Resources */,
 				CA42C52C188D599B0010757B /* Icon-72@2x.png in Resources */,
+				CAC69AF0189282EC00ED4DB4 /* hero-hd.png in Resources */,
+				CA2881B61891B7BB00B1F1C9 /* Music.m4a in Resources */,
+				CA2881B71891B7BB00B1F1C9 /* Play Button Alternative.m4a in Resources */,
+				CAC69AEC1892773400ED4DB4 /* BG-hd.png in Resources */,
+				CA2881B81891B7BB00B1F1C9 /* Play Button.m4a in Resources */,
 				CA42C51D188D599B0010757B /* Default.png in Resources */,
+				CAC69AEE1892773400ED4DB4 /* flowers-hd.png in Resources */,
+				CA2881D91891D85E00B1F1C9 /* clouds_bushes-hd.png in Resources */,
 				CA42C526188D599B0010757B /* Icon.png in Resources */,
 				CA42C534188D599B0010757B /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				CA2881B31891B7BB00B1F1C9 /* idle3.m4a in Resources */,
 				CA42C523188D599B0010757B /* Default-Landscape~ipad.png in Resources */,
+				CA2881B51891B7BB00B1F1C9 /* Level Completed.m4a in Resources */,
 				CA42C538188D599B0010757B /* Icon-Small.png in Resources */,
 				CA42C536188D599B0010757B /* Icon-Small-50.png in Resources */,
+				CA2881AC1891B7BB00B1F1C9 /* Chest.m4a in Resources */,
+				CA2881BB1891B7BB00B1F1C9 /* Rock Push.m4a in Resources */,
+				CA2881611890227C00B1F1C9 /* zemin4-hd.png in Resources */,
+				CA2881C31891BBDA00B1F1C9 /* Jump.m4a in Resources */,
 				CA42C71F188D599D0010757B /* LICENSE_Kazmath.txt in Resources */,
 				CA42C52A188D599B0010757B /* Icon-72.png in Resources */,
+				CA28815F1890227C00B1F1C9 /* zemin2-hd.png in Resources */,
 				CA42C678188D599C0010757B /* LICENSE_cocos2d.txt in Resources */,
 				CA42C521188D599B0010757B /* Default-568h@2x.png in Resources */,
+				CA2881B21891B7BB00B1F1C9 /* idle2.m4a in Resources */,
 				CA42C541188D599B0010757B /* iTunesArtwork in Resources */,
 				CA42C7DB188D59D10010757B /* HomeSeek1-hd.tmx in Resources */,
+				CA2881D51891CCCE00B1F1C9 /* tree3-hd.png in Resources */,
+				CA28815E1890227C00B1F1C9 /* zemin1-hd.png in Resources */,
+				CA2881BA1891B7BB00B1F1C9 /* Rock Fall.m4a in Resources */,
 				CA42C53C188D599B0010757B /* Icon-Spotlight-iOS7.png in Resources */,
+				CA28816D1891789700B1F1C9 /* coin-hd.png in Resources */,
 				CA42C530188D599B0010757B /* Icon-76@2x.png in Resources */,
+				CA2881D31891CCCE00B1F1C9 /* tree1-hd.png in Resources */,
+				CAC69AED1892773400ED4DB4 /* enemy_plantV2-hd.png in Resources */,
 				CA42C7A4188D599E0010757B /* LICENSE_Chipmunk.txt in Resources */,
 				CA42C53E188D599B0010757B /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				CA2881AE1891B7BB00B1F1C9 /* Die.m4a in Resources */,
+				CA2881601890227C00B1F1C9 /* zemin3-hd.png in Resources */,
 				CA42C52E188D599B0010757B /* Icon-76.png in Resources */,
+				CA2881D41891CCCE00B1F1C9 /* tree2-hd.png in Resources */,
 				CA42C704188D599D0010757B /* ChangeLog in Resources */,
+				CA2881AB1891B7BB00B1F1C9 /* Button.m4a in Resources */,
+				CA2881B01891B7BB00B1F1C9 /* Energy Increase.m4a in Resources */,
 				CA42C543188D599B0010757B /* iTunesArtwork@2x in Resources */,
+				CA2881BD1891B7BB00B1F1C9 /* Wear.m4a in Resources */,
+				CA2881C91891BEA600B1F1C9 /* Walking.m4a in Resources */,
+				CA2881D01891CCCE00B1F1C9 /* big_tree-hd.png in Resources */,
+				CA2881D11891CCCE00B1F1C9 /* floor-hd.png in Resources */,
+				CA2881C51891BDBE00B1F1C9 /* Coin.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1716,9 +1871,11 @@
 				CA42C578188D599B0010757B /* CCDirector.m in Sources */,
 				CA42C6E3188D599D0010757B /* CCScrollView.m in Sources */,
 				CA42C5D6188D599C0010757B /* CCResponder.m in Sources */,
+				CA28816B1891787D00B1F1C9 /* Coin.m in Sources */,
 				CA42C56D188D599B0010757B /* CCClippingNode.m in Sources */,
 				CA42C600188D599C0010757B /* CCSpriteBatchNode.m in Sources */,
 				CA42C624188D599C0010757B /* CCTransition.m in Sources */,
+				CA2881971891815B00B1F1C9 /* SoundManager.m in Sources */,
 				CA42C603188D599C0010757B /* CCSpriteFrame.m in Sources */,
 				CA42C597188D599C0010757B /* CCNodeColor.m in Sources */,
 				CA42C670188D599C0010757B /* TransformUtils.m in Sources */,
@@ -1782,6 +1939,7 @@
 				CA42C61E188D599C0010757B /* CCTiledMapObjectGroup.m in Sources */,
 				CA42C71B188D599D0010757B /* vec3.c in Sources */,
 				CA42C59E188D599C0010757B /* CCLayoutBox.m in Sources */,
+				CA288166189043D400B1F1C9 /* Plant.m in Sources */,
 				CA42C59B188D599C0010757B /* CCLayout.m in Sources */,
 				CA42C6BE188D599D0010757B /* OALSuspendHandler.m in Sources */,
 				CA42C71D188D599D0010757B /* vec4.c in Sources */,

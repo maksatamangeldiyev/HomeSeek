@@ -24,7 +24,7 @@
             point.scale = 16;
             point.color = [CCColor redColor];
             [self.collisionPoints addObject:point];
-            [self addChild:point];
+//            [self addChild:point];
         }
     }
     return self;
@@ -62,17 +62,25 @@
     int tgid = [layer tileGIDAt:position];
     
     CGRect tileRect = [self tileRectFromTileCoords:position];
+    tileRect.size.width /=2;
+    tileRect.size.height /=2;
     
     NSDictionary * info = [self.mapInfo.tileProperties objectForKey: [NSNumber numberWithInt: tgid] ];
     float tileSlope = [[info objectForKey:@"slope"] floatValue];
+    float tileSlopeYStart = [[info objectForKey:@"slopeYStart"] floatValue];
+    float tileSlopeYEnd = [[info objectForKey:@"slopeYEnd"] floatValue];
     
-    retVal.tileSprite = [layer tileAt:position];
+    retVal.slopeYLeft = tileSlopeYStart;
+    retVal.slopeYRight = tileSlopeYEnd;
+//    retVal.tileSprite = [layer tileAt:position];
+    retVal.tileRect = tileRect;
     retVal.gid = tgid;
     retVal.x = tileRect.origin.x;
     retVal.y = tileRect.origin.y;
     retVal.tilePos = position;
     retVal.tileType = type;
-    retVal.slope = tileSlope;
+    
+    retVal.slopeAngle = tileSlope;
     
     return retVal;
 }
@@ -86,7 +94,7 @@
     
     
     CGPoint lb1 = ccp(plPosLeftBototm.x, plPosLeftBototm.y-1);
-    CGPoint lb2 = ccp(plPosLeftBototm.x, plPosLeftBototm.y);
+    CGPoint lb2 = ccp(plPosLeftBototm.x-1, plPosLeftBototm.y-1);
     CGPoint lb3 = ccp(plPosLeftBototm.x+1, plPosLeftBototm.y);
     
     CGPoint lt1 = ccp(plPosLeftTop.x, plPosLeftTop.y+1);
@@ -106,6 +114,7 @@
     [gids addObject:[self tileDataForPos:lb3 forLayer:layer withType:Bottom]];
     [gids addObject:[self tileDataForPos:lt3 forLayer:layer withType:Top]];
     
+    [gids addObject:[self tileDataForPos:lb2 forLayer:layer withType:Left]];
     [gids addObject:[self tileDataForPos:lb1 forLayer:layer withType:Left]];
     [gids addObject:[self tileDataForPos:rb1 forLayer:layer withType:Right]];
     
@@ -116,7 +125,6 @@
     [gids addObject:[self tileDataForPos:rt3 forLayer:layer withType:Top]];
     //
     [gids addObject:[self tileDataForPos:rb3 forLayer:layer withType:Bottom]];
-    
     
     
     int i=0;
@@ -135,7 +143,7 @@
 {
     CCSprite* collisionPoint = [self.collisionPoints objectAtIndex:index];
     [collisionPoint setColor:color];
-    collisionPoint.zOrder = 10;
+    collisionPoint.zOrder = 10000;
 
 }
 @end

@@ -14,9 +14,9 @@
 {
     if(r1.origin.y <= r2.origin.y)
     {
-        //        if(r1.origin.x > r2.origin.x)
+                if(r1.origin.x > r2.origin.x)
         {
-            //            if(r1.origin.x < r2.origin.x + r2.size.width)
+                        if(r1.origin.x < r2.origin.x + r2.size.width)
             {
                 return YES;
             }
@@ -44,9 +44,9 @@
 {
     if(r1.origin.x < r2.origin.x)
     {
-        //        if(r1.origin.y > r2.origin.y)
+        if(r1.origin.y > r2.origin.y)
         {
-            //            if(r1.origin.y < r2.origin.y + r2.size.height)
+                if(r1.origin.y < r2.origin.y + r2.size.height)
             {
                 return YES;
             }
@@ -59,9 +59,9 @@
 {
     if(r1.origin.x >= r2.origin.x)
     {
-        //        if(r1.origin.y > r2.origin.y)
+                if(r1.origin.y > r2.origin.y)
         {
-            //            if(r1.origin.y < r2.origin.y + r2.size.height)
+                        if(r1.origin.y < r2.origin.y + r2.size.height)
             {
                 return YES;
             }

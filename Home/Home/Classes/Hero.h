@@ -17,6 +17,7 @@ enum
 
 @property (nonatomic, assign) BOOL isWalking;
 @property (nonatomic, assign) BOOL isJumping;
+@property (nonatomic, assign) BOOL isDead;
 
 
 -(instancetype) initWithMap:(CCTiledMap*) map;
@@ -26,5 +27,7 @@ enum
 -(void) jump;
 
 -(void) landOnGround;
+
+-(void) die;
 
 @end

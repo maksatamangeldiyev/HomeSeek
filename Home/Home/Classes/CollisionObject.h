@@ -11,11 +11,15 @@
 
 @interface CollisionObject : CCSprite
 
-@property (nonatomic, assign) CCSprite* innerSprite;
-@property (nonatomic,assign) CGPoint velocity;
+@property (nonatomic, strong) CCSprite* innerSprite;
+@property (nonatomic, assign) CGPoint velocity;
 @property (nonatomic, assign) CGPoint desiredPosition;
 @property (nonatomic, assign) BOOL onGround;
 @property (nonatomic, strong) NSDate* lastTimeOnGround;
+@property (nonatomic, assign) CGPoint center;
+
+@property (nonatomic, assign) float slope;
+
 
 -(instancetype) initWithFileName:(NSString*) imgFileName;
 
@@ -26,5 +30,8 @@
 -(void) landOnGround;
 
 -(void) setPositionWithTileObject:(NSDictionary*) tileObject;
+
+
+-(void) collisionWith:(CollisionObject*) collided size:(CGSize) collisionSize;
 
 @end

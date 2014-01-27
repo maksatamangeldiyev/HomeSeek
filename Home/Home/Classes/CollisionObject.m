@@ -11,20 +11,23 @@
 @implementation CollisionObject
 
 CCSprite* drawNode;
-CGPoint center;
+
 
 -(instancetype) initWithFileName:(NSString*) imgFileName
 {
     if(self = [super init])
     {
         self.innerSprite = [CCSprite spriteWithImageNamed:imgFileName];
-        [self addChild:self.innerSprite];
-        self.contentSize = self.innerSprite.contentSize;
-        center = ccp(self.contentSize.width/2.f, self.contentSize.height/2.f);
+      [self addChild:self.innerSprite];
         
-        self.innerSprite.position = center;
+        self.contentSize =  self.innerSprite.contentSize;
+        self.center = ccp(self.contentSize.width/2.f, self.contentSize.height/2.f);
+        
+        self.innerSprite.position = self.center;
         
         self.velocity = ccp(0,0);
+      
+
         
         drawNode = [CCSprite spriteWithImageNamed:@"1px.png"];
         drawNode.color = [CCColor blueColor];
@@ -41,7 +44,7 @@ CGPoint center;
     self.velocity = ccpAdd(self.velocity, gravityStep);
     CGPoint stepVelocity = ccpMult(self.velocity, delta);
     self.desiredPosition = ccpAdd(self.position, stepVelocity);
-    self.desiredPosition = ccp(roundf(self.desiredPosition.x), roundf(self.desiredPosition.y));
+//    self.desiredPosition = ccp(roundf(self.desiredPosition.x), roundf(self.desiredPosition.y));
 }
 
 
@@ -93,6 +96,10 @@ CGPoint center;
     int x = [[tileObject valueForKey:@"x"] intValue]/2;
     int y = [[tileObject valueForKey:@"y"] intValue]/2;
     self.position = ccp(x,y);
+}
+
+-(void) collisionWith:(CollisionObject*) collided size:(CGSize) collisionSize
+{
 }
 
 @end

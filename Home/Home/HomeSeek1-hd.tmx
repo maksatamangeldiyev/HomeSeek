@@ -1,54 +1,691 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="310" height="46" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tileset-platformer-hd" tilewidth="32" tileheight="32">
   <image source="tileset-platformer-hd.png" width="192" height="544"/>
   <tile id="25">
    <properties>
     <property name="slope" value="45"/>
+    <property name="slopeYEnd" value="32"/>
+    <property name="slopeYStart" value="0"/>
    </properties>
   </tile>
   <tile id="27">
    <properties>
     <property name="slope" value="-45"/>
+    <property name="slopeYEnd" value="0"/>
+    <property name="slopeYStart" value="32"/>
    </properties>
   </tile>
  </tileset>
- <layer name="Background" width="100" height="20">
+ <tileset firstgid="103" name="floor" tilewidth="320" tileheight="256">
+  <image source="floor-hd.png" width="1600" height="256"/>
+ </tileset>
+ <tileset firstgid="108" name="flowers-hd" tilewidth="64" tileheight="64">
+  <image source="flowers-hd.png" width="576" height="64"/>
+ </tileset>
+ <tileset firstgid="117" name="tree1-hd" tilewidth="320" tileheight="576">
+  <image source="tree1-hd.png" width="320" height="576"/>
+ </tileset>
+ <tileset firstgid="118" name="tree2-hd" tilewidth="448" tileheight="832">
+  <image source="tree2-hd.png" width="448" height="832"/>
+ </tileset>
+ <tileset firstgid="119" name="tree3-hd" tilewidth="192" tileheight="384">
+  <image source="tree3-hd.png" width="192" height="384"/>
+ </tileset>
+ <tileset firstgid="120" name="clouds_bushes-hd" tilewidth="448" tileheight="256">
+  <image source="clouds_bushes-hd.png" width="1792" height="512"/>
+ </tileset>
+ <tileset firstgid="128" name="big_tree-hd" tilewidth="448" tileheight="896">
+  <image source="big_tree-hd.png" width="448" height="896"/>
+ </tileset>
+ <layer name="Clouds" width="310" height="46">
   <data encoding="base64" compression="zlib">
-   eJzt0DEOABAMQFF3wmJz/0sxGhqJhcF7yd+0aaQEAMBLeVaW6ttz4EstiPhfdu3m+8H+6B0AAADADQPiQgdk
+   eJzt2jEKwCAMAECfbX/fuaUgFDTR3C1uEhVNArYGAAAAAAAAVHRFB7CZivtVcc1wij5p3qh3wXtEdrPuHLCf7Dkre3ysJX8BwD9qKhiLrDXdUQAAAAAAAAAA/CEBeOqvEQDgi17qDM4R6tLzAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKxzAxqECPU=
   </data>
  </layer>
- <layer name="Ground" width="100" height="20">
+ <layer name="bush" width="310" height="46">
   <data encoding="base64" compression="zlib">
-   eJzt1k0KwjAQhuFsXHkDfyDqMbz/vexQJFnMJDNp04W+D3zgoqLkpdWUAADAr3ga67ksuxq7TfmmsEiLvOxhTHrS5Bi9FjQ5jrcFTeaLtqBJjPVbXO80sPvGz/zHifOEyb3wCvT43kPwGXk2eXvkRI+a5xyiPWRaD+0erd+D/Xp4tFrQo+idxdYe7+p16/8ZVnv00KY9n3LjehStMxntERl0nA1QfAA2tiOr
+   eJzt3DsOgCAMAFDPbfxc3cFJA4kaPpa8N7pYBxtoodMEAAAAAAAAAAAAAABADVvvAICi5szztWkUANyl8rB1GADA1dI7AAhu7x0Ar+Tqdam9Yq7mB6OJUMeWawGAP4qwjgIAAAAAAAAA8pwX5g3nWQEAAAAAAKCc2v3a1v3gJ+9L9Ryfzkn+erfdHGaoK+o/Zl4GAABA2qj7pVG/CyJwdwngJB8CAAAAAAC0p0cDAAAAAPAPB8aUDhw=
   </data>
  </layer>
- <layer name="Enemies" width="100" height="20" visible="0">
+ <layer name="Background" width="310" height="46" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAYH0AAAQ==
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
   </data>
  </layer>
- <layer name="Coins" width="100" height="20" visible="0">
+ <layer name="Ground" width="310" height="46">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAYH0AAAQ==
+   eJztnFFOw0AMBXMO4Cf3vyTiLwlJ2t2u/fyyM9IItYDktdePIkHXZVnWDiEG+u8Dc9LQk1fslRb67wNz0kCu+UH/fWBOGsg1P+i/D8xJA7nmB/33gTlpINf8oP8+MCcN5Jof9N8H5qSBXPOD/vvAnDSQa37Qfx9c5zRi/39OdKrfaV7ZfB38bvCKv8+tm4/r5vH2OdDjuidRuZaVb5G51rLDrWbn/yuO+XXmqJ8Lx14ce115X2Zj1lx7lWnRGReZa9EqXt++k1+jsu2KT78f8nCd08g8W26eXw5fo66/ilGvcT/Nr8jXa+SaD65zGrmPLS4njzPrr+To3+NHZFJr9rTcdXLNhwpzir7DZ/t4JDvf1JmUkW+ZNRz7GgG55kOFOWVm2qtd3NKSc+psqWJ2XzKpWBOcU2FO1XaxR/UZnmg1XOuekQpzUu/PlWSbzoo41z4bWdmgrCHrjOo6nmJV3OufiQp3Vb1HWMuquNc/ExXuqnqPsJZVca9/JircUfUeYS2rclev65meSoX7qd4jrGUr6nojzgT+qO8c1rIVdb0RZwIfFH9/i372oq474kyzcvY/SNnvtfAu6ruFHip44pmcuXoNRK6hqwBO90O9L+ghgNP9UO8Legj/eadvn7w/VLX5qO8g4mhhT3TvRs5HfXcQqwp7ons3cj7qu4NYVdgT3buR81HfHcSqwp7o3o2cj/ruICL2eIe6NkTEHu9Q14aI2OMd6toQEXu8Q10bIiIiIiIiIiIiIiIiIiIiIiIiIiIi4gz+At7SNsM=
   </data>
  </layer>
- <layer name="Objects" width="100" height="20" visible="0">
+ <layer name="Tree_small" width="310" height="46">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAYH0AAAQ==
+   eJzt2cEJADAIA8Bs3fU7RChVuJvAhwSJCQAAAAAAAAAAAAAAAAAAAOxxfg8AAAAAAADRVwMAAAAA0NM1AwAAAAAAAMzknwsA0HNTAQAAAAAv6B7ZyN4CzCObAQAAAAAAAAAAAABoXPlHA7k=
   </data>
  </layer>
- <layer name="Character" width="100" height="20" visible="0">
+ <layer name="Tree_Back" width="310" height="46" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztwQEBAAAAgJD+r+4ICgAAAAAAAAAYH0AAAQ==
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
   </data>
  </layer>
- <objectgroup name="Char" width="100" height="20">
-  <object name="SpawnPoint" x="96" y="256" width="32" height="32"/>
+ <layer name="Enemies" width="310" height="46" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
+  </data>
+ </layer>
+ <layer name="Coins" width="310" height="46" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
+  </data>
+ </layer>
+ <layer name="Objects" width="310" height="46" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
+  </data>
+ </layer>
+ <layer name="Character" width="310" height="46" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
+  </data>
+ </layer>
+ <objectgroup name="Char" width="310" height="46">
+  <object x="557" y="243" width="33" height="37"/>
  </objectgroup>
- <layer name="Foreground" width="100" height="20">
+ <layer name="Foreground" width="310" height="46" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztwwENAAAMAiA7vn+XN7CAsJEAAACw6koAAACANQ//GgJG
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
+  </data>
+ </layer>
+ <objectgroup name="Plant" width="310" height="46">
+  <object x="3220" y="152" width="39" height="25">
+   <ellipse/>
+  </object>
+  <object x="5409" y="1016" width="25" height="18">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <layer name="Rocks" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJzt3EsKgDAMBUBv6+f+B3DhRiyCpYnYOrOMG6mQllfiNAEAAAAAAAAAAAAAAAAAAABAvjWovgW8CwBtonp6bR3om3NcyZoAAD1wZilZEyjJecbku0LfZPMAAADPLcl1gL/RDwEAYGxz43OA0ZitBYDD3V7m3gC40hcAAAAAiJA939Pb/FD2fJQ5K+BMTwAAAAB4T1QWUzvTFJ31fCl/lmMB3NMLAfRCAIAv8C8mAAAAMrgDIMsOhHAaiA==
+  </data>
+ </layer>
+ <layer name="Rocks_Fore" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJzt2aENACAQBMHvlhD69ygUCQZxL2YqWL9VAAAAAAAAAAAAAAAAAAAAAAAAAADQ00oHAAAAAAAAAADwNNMBAAAAAABAG74BAAAAAABw+AYAAABwG+kAAAAAAAAAAAAAAL5tcZwCDg==
+  </data>
+ </layer>
+ <objectgroup name="Coins" width="310" height="46">
+  <object x="497" y="262">
+   <ellipse/>
+  </object>
+  <object x="659" y="208">
+   <ellipse/>
+  </object>
+  <object x="687" y="171">
+   <ellipse/>
+  </object>
+  <object x="717" y="146">
+   <ellipse/>
+  </object>
+  <object x="756" y="136">
+   <ellipse/>
+  </object>
+  <object x="792" y="129">
+   <ellipse/>
+  </object>
+  <object x="826" y="129">
+   <ellipse/>
+  </object>
+  <object x="856" y="151">
+   <ellipse/>
+  </object>
+  <object x="909" y="175">
+   <ellipse/>
+  </object>
+  <object x="938" y="202">
+   <ellipse/>
+  </object>
+  <object x="976" y="216">
+   <ellipse/>
+  </object>
+  <object x="1006" y="240">
+   <ellipse/>
+  </object>
+  <object x="1047" y="251">
+   <ellipse/>
+  </object>
+  <object x="1086" y="257">
+   <ellipse/>
+  </object>
+  <object x="1130" y="259">
+   <ellipse/>
+  </object>
+  <object x="1177" y="262">
+   <ellipse/>
+  </object>
+  <object x="1226" y="261">
+   <ellipse/>
+  </object>
+  <object x="1267" y="241">
+   <ellipse/>
+  </object>
+  <object x="1648" y="366">
+   <ellipse/>
+  </object>
+  <object x="1680" y="340">
+   <ellipse/>
+  </object>
+  <object x="1718" y="304">
+   <ellipse/>
+  </object>
+  <object x="1754" y="288">
+   <ellipse/>
+  </object>
+  <object x="1788" y="296">
+   <ellipse/>
+  </object>
+  <object x="1828" y="326">
+   <ellipse/>
+  </object>
+  <object x="1878" y="352">
+   <ellipse/>
+  </object>
+  <object x="1960" y="346">
+   <ellipse/>
+  </object>
+  <object x="2086" y="316">
+   <ellipse/>
+  </object>
+  <object x="2198" y="302">
+   <ellipse/>
+  </object>
+  <object x="2552" y="236">
+   <ellipse/>
+  </object>
+  <object x="2594" y="184">
+   <ellipse/>
+  </object>
+  <object x="2642" y="112">
+   <ellipse/>
+  </object>
+  <object x="2586" y="88">
+   <ellipse/>
+  </object>
+  <object x="2444" y="104">
+   <ellipse/>
+  </object>
+  <object x="2538" y="84">
+   <ellipse/>
+  </object>
+  <object x="2482" y="78">
+   <ellipse/>
+  </object>
+  <object x="3118" y="258">
+   <ellipse/>
+  </object>
+  <object x="3118" y="360">
+   <ellipse/>
+  </object>
+  <object x="3124" y="492">
+   <ellipse/>
+  </object>
+  <object x="3122" y="606">
+   <ellipse/>
+  </object>
+  <object x="3122" y="654">
+   <ellipse/>
+  </object>
+  <object x="2988" y="652">
+   <ellipse/>
+  </object>
+  <object x="2860" y="652">
+   <ellipse/>
+  </object>
+  <object x="2732" y="646">
+   <ellipse/>
+  </object>
+  <object x="2610" y="642">
+   <ellipse/>
+  </object>
+  <object x="2468" y="648">
+   <ellipse/>
+  </object>
+  <object x="2368" y="840">
+   <ellipse/>
+  </object>
+  <object x="2364" y="876">
+   <ellipse/>
+  </object>
+  <object x="2368" y="914">
+   <ellipse/>
+  </object>
+  <object x="2366" y="950">
+   <ellipse/>
+  </object>
+  <object x="2396" y="842">
+   <ellipse/>
+  </object>
+  <object x="2436" y="858">
+   <ellipse/>
+  </object>
+  <object x="2430" y="898">
+   <ellipse/>
+  </object>
+  <object x="2400" y="906">
+   <ellipse/>
+  </object>
+  <object x="2502" y="904">
+   <ellipse/>
+  </object>
+  <object x="2534" y="898">
+   <ellipse/>
+  </object>
+  <object x="2576" y="876">
+   <ellipse/>
+  </object>
+  <object x="2548" y="840">
+   <ellipse/>
+  </object>
+  <object x="2500" y="864">
+   <ellipse/>
+  </object>
+  <object x="2492" y="952">
+   <ellipse/>
+  </object>
+  <object x="2578" y="956">
+   <ellipse/>
+  </object>
+  <object x="2530" y="958">
+   <ellipse/>
+  </object>
+  <object x="2482" y="902">
+   <ellipse/>
+  </object>
+  <object x="2890" y="836">
+   <ellipse/>
+  </object>
+  <object x="2884" y="900">
+   <ellipse/>
+  </object>
+  <object x="2884" y="948">
+   <ellipse/>
+  </object>
+  <object x="2880" y="978">
+   <ellipse/>
+  </object>
+  <object x="2882" y="868">
+   <ellipse/>
+  </object>
+  <object x="2902" y="932">
+   <ellipse/>
+  </object>
+  <object x="2922" y="898">
+   <ellipse/>
+  </object>
+  <object x="2910" y="966">
+   <ellipse/>
+  </object>
+  <object x="2940" y="980">
+   <ellipse/>
+  </object>
+  <object x="2676" y="832">
+   <ellipse/>
+  </object>
+  <object x="2694" y="834">
+   <ellipse/>
+  </object>
+  <object x="2712" y="836">
+   <ellipse/>
+  </object>
+  <object x="2732" y="844">
+   <ellipse/>
+  </object>
+  <object x="2744" y="858">
+   <ellipse/>
+  </object>
+  <object x="2748" y="878">
+   <ellipse/>
+  </object>
+  <object x="2748" y="902">
+   <ellipse/>
+  </object>
+  <object x="2748" y="930">
+   <ellipse/>
+  </object>
+  <object x="2746" y="954">
+   <ellipse/>
+  </object>
+  <object x="2750" y="972">
+   <ellipse/>
+  </object>
+  <object x="2770" y="972">
+   <ellipse/>
+  </object>
+  <object x="2734" y="904">
+   <ellipse/>
+  </object>
+  <object x="2710" y="904">
+   <ellipse/>
+  </object>
+  <object x="2688" y="908">
+   <ellipse/>
+  </object>
+  <object x="2672" y="924">
+   <ellipse/>
+  </object>
+  <object x="2678" y="942">
+   <ellipse/>
+  </object>
+  <object x="2692" y="960">
+   <ellipse/>
+  </object>
+  <object x="2722" y="970">
+   <ellipse/>
+  </object>
+  <object x="2556" y="894">
+   <ellipse/>
+  </object>
+  <object x="2566" y="864">
+   <ellipse/>
+  </object>
+  <object x="2524" y="854">
+   <ellipse/>
+  </object>
+  <object x="2484" y="884">
+   <ellipse/>
+  </object>
+  <object x="2486" y="932">
+   <ellipse/>
+  </object>
+  <object x="2512" y="964">
+   <ellipse/>
+  </object>
+  <object x="2558" y="958">
+   <ellipse/>
+  </object>
+  <object x="2362" y="898">
+   <ellipse/>
+  </object>
+  <object x="2884" y="930">
+   <ellipse/>
+  </object>
+  <object x="3342" y="1012">
+   <ellipse/>
+  </object>
+  <object x="3366" y="988">
+   <ellipse/>
+  </object>
+  <object x="3410" y="960">
+   <ellipse/>
+  </object>
+  <object x="3478" y="938">
+   <ellipse/>
+  </object>
+  <object x="3572" y="936">
+   <ellipse/>
+  </object>
+  <object x="3556" y="438">
+   <ellipse/>
+  </object>
+  <object x="3556" y="470">
+   <ellipse/>
+  </object>
+  <object x="3556" y="504">
+   <ellipse/>
+  </object>
+  <object x="3556" y="528">
+   <ellipse/>
+  </object>
+  <object x="3554" y="558">
+   <ellipse/>
+  </object>
+  <object x="3554" y="590">
+   <ellipse/>
+  </object>
+  <object x="3554" y="622">
+   <ellipse/>
+  </object>
+  <object x="3552" y="654">
+   <ellipse/>
+  </object>
+  <object x="3574" y="662">
+   <ellipse/>
+  </object>
+  <object x="3608" y="662">
+   <ellipse/>
+  </object>
+  <object x="3640" y="660">
+   <ellipse/>
+  </object>
+  <object x="3666" y="656">
+   <ellipse/>
+  </object>
+  <object x="3662" y="608">
+   <ellipse/>
+  </object>
+  <object x="3662" y="576">
+   <ellipse/>
+  </object>
+  <object x="3662" y="536">
+   <ellipse/>
+  </object>
+  <object x="3658" y="502">
+   <ellipse/>
+  </object>
+  <object x="3654" y="474">
+   <ellipse/>
+  </object>
+  <object x="3652" y="438">
+   <ellipse/>
+  </object>
+  <object x="3642" y="416">
+   <ellipse/>
+  </object>
+  <object x="3616" y="418">
+   <ellipse/>
+  </object>
+  <object x="3588" y="420">
+   <ellipse/>
+  </object>
+  <object x="3586" y="534">
+   <ellipse/>
+  </object>
+  <object x="3628" y="542">
+   <ellipse/>
+  </object>
+  <object x="3618" y="590">
+   <ellipse/>
+  </object>
+  <object x="3582" y="608">
+   <ellipse/>
+  </object>
+  <object x="4204" y="810">
+   <ellipse/>
+  </object>
+  <object x="4250" y="810">
+   <ellipse/>
+  </object>
+  <object x="4334" y="810">
+   <ellipse/>
+  </object>
+  <object x="4426" y="810">
+   <ellipse/>
+  </object>
+  <object x="4504" y="808">
+   <ellipse/>
+  </object>
+  <object x="4632" y="968">
+   <ellipse/>
+  </object>
+  <object x="4694" y="972">
+   <ellipse/>
+  </object>
+  <object x="4764" y="972">
+   <ellipse/>
+  </object>
+  <object x="4998" y="788">
+   <ellipse/>
+  </object>
+  <object x="5080" y="790">
+   <ellipse/>
+  </object>
+  <object x="5170" y="786">
+   <ellipse/>
+  </object>
+  <object x="5286" y="778">
+   <ellipse/>
+  </object>
+  <object x="5328" y="750">
+   <ellipse/>
+  </object>
+  <object x="5392" y="734">
+   <ellipse/>
+  </object>
+  <object x="5450" y="732">
+   <ellipse/>
+  </object>
+  <object x="5484" y="748">
+   <ellipse/>
+  </object>
+  <object x="5524" y="770">
+   <ellipse/>
+  </object>
+  <object x="5572" y="808">
+   <ellipse/>
+  </object>
+  <object x="6200" y="690">
+   <ellipse/>
+  </object>
+  <object x="6254" y="694">
+   <ellipse/>
+  </object>
+  <object x="6984" y="342">
+   <ellipse/>
+  </object>
+  <object x="6978" y="386">
+   <ellipse/>
+  </object>
+  <object x="6972" y="438">
+   <ellipse/>
+  </object>
+  <object x="6970" y="482">
+   <ellipse/>
+  </object>
+  <object x="7010" y="486">
+   <ellipse/>
+  </object>
+  <object x="7064" y="484">
+   <ellipse/>
+  </object>
+  <object x="7124" y="484">
+   <ellipse/>
+  </object>
+  <object x="7206" y="484">
+   <ellipse/>
+  </object>
+  <object x="7300" y="472">
+   <ellipse/>
+  </object>
+  <object x="7300" y="424">
+   <ellipse/>
+  </object>
+  <object x="7258" y="376">
+   <ellipse/>
+  </object>
+  <object x="7226" y="356">
+   <ellipse/>
+  </object>
+  <object x="7124" y="352">
+   <ellipse/>
+  </object>
+  <object x="7032" y="330">
+   <ellipse/>
+  </object>
+  <object x="9258" y="128">
+   <ellipse/>
+  </object>
+  <object x="9274" y="164">
+   <ellipse/>
+  </object>
+  <object x="9290" y="190">
+   <ellipse/>
+  </object>
+  <object x="9316" y="220">
+   <ellipse/>
+  </object>
+  <object x="9330" y="258">
+   <ellipse/>
+  </object>
+  <object x="9348" y="286">
+   <ellipse/>
+  </object>
+  <object x="9362" y="310">
+   <ellipse/>
+  </object>
+  <object x="9386" y="340">
+   <ellipse/>
+  </object>
+  <object x="9404" y="360">
+   <ellipse/>
+  </object>
+  <object x="9436" y="354">
+   <ellipse/>
+  </object>
+  <object x="9452" y="312">
+   <ellipse/>
+  </object>
+  <object x="9468" y="280">
+   <ellipse/>
+  </object>
+  <object x="9484" y="236">
+   <ellipse/>
+  </object>
+  <object x="9498" y="204">
+   <ellipse/>
+  </object>
+  <object x="9512" y="168">
+   <ellipse/>
+  </object>
+  <object x="9532" y="130">
+   <ellipse/>
+  </object>
+  <object x="9546" y="100">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <layer name="Rocks_Fore2" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7D5xf+PjAXSKmgCAAAAAAAAAAAAAAAAAAAAAAAAwHfTDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFELNX8AbA==
+  </data>
+ </layer>
+ <layer name="Rocks_Fore3" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJztziEBAAAIA7D3pb+nwhWYLcESAAAAAAAAAAAAAAAAAAAAAAAAWvMdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4tMd0AbA==
+  </data>
+ </layer>
+ <layer name="Rocks_Fore4" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJztyCESAAAEADDfdf7fvUAQSFtcBAAAAAAAAAAAAAAAAAAAAADAvxo+lw8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcKkBR/0BPg==
+  </data>
+ </layer>
+ <layer name="Flowers" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJzt3NuOgyAQANB+cLtt//9lHzabkAYErBBGz3mytU3wwjjC6O0GAAAAAAAAAADAit6Nv3sNbQVRPJPln411sIKt83XLPVl+HNSWyHr23Zlcdbs5j5YcL/p5XspPX5X1JavmMs/Ccu5z6zq4gsh5XEsML/XxUmy/F74fRQwCZjs67tfimDgHx0tzoMi53Ci5fK6UN7bO+0B06f1PtGvzVpy7ah++6nZDi0j9I/q8w16RjhHAEcQ9AJgnrX/KXYPV9wMAAAD02zumctU5cWCOnvppc7Z8Q60+sCXa/OPsZ6cBRpPrAwAAZ/f5XohvxqxLY1krz+vW3ouR2x+1e8Xcf6K9fwOiSOPOyrEm1dPOI2PHnv3TOzYW5RgAeXtjzmfuU4ods2KEvAsAAKjpvT/prYscOaZSGsNvvRcaUeOpbhTW8x8rRteh751XzLWrFgtH1nIa24bzidqvZ+RV0Z5RAgAAAAAA1mf+AQAAAAAAAAD+/ALkjSke
+  </data>
+ </layer>
+ <layer name="Bushes" width="310" height="46" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Aze0AAB
+  </data>
+ </layer>
+ <layer name="Tree_Yellow" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6CnNr8xPickIAEAAAAAAAAAAAAAAAD4YdoBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgnAUEcQB3
+  </data>
+ </layer>
+ <layer name="Big_Tree" width="310" height="46">
+  <data encoding="base64" compression="zlib">
+   eJztzkERACAMA7BJr3Qs8OvBEgWZAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABupR0AAJ6QdgAAAAAAgO+lHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBFDtcvAYE=
   </data>
  </layer>
 </map>

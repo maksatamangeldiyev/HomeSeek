@@ -161,8 +161,8 @@ static CCFileUtils *fileUtils = nil;
 						 @"-ipadhd", CCFileUtilsSuffixiPadHD,
 						 @"", CCFileUtilsSuffixiPhone,
 						 @"-hd", CCFileUtilsSuffixiPhoneHD,
-						 @"-iphone5", CCFileUtilsSuffixiPhone5,
-						 @"-iphone5hd", CCFileUtilsSuffixiPhone5HD,
+						 @"-hd", CCFileUtilsSuffixiPhone5,
+						 @"-hd", CCFileUtilsSuffixiPhone5HD,
 						 @"", CCFileUtilsSuffixDefault,
 						 nil];
 
